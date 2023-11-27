@@ -1,7 +1,7 @@
 const http = require('http');
 const fileSystem = require('fs');
 http.createServer((req, res) => {
-    fileSystem.readFile(['demo.html','style.css'], (error, data) => {
+    fileSystem.readFile('demo.html', (error, data) => {
         if (error) { 
             res.writeHead(500, { 'content-type': 'text/plain' });
             res.write('server error')
